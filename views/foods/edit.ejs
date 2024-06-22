@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+  />
+    <title>Edit new food</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit food</h1>
+
+    <form method="POST" action="/users/<%= user._id %>/foods/<%= food._id %>?_method=PUT">
+        <label for="food">Food name: </label> 
+        <input type="text" name="name" value="<%= food.name %>">
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+  </body>
+</html>

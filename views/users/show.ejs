@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+  />
+    <title>Pantry of <%= communityUser.username%></title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Pantry of <%= communityUser.username%></h1>
+
+    <ul>
+        <% communityUser.pantry.forEach(food => { %>
+            <li>
+                <%= food.name %>
+            </li>
+        <%}); %>
+    </ul>
+
+
+</body>
+</html>

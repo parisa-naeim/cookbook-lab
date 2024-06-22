@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+  />
+    <title>Add new food</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add new food to my pantry</h1>
+
+    <form method="POST" action="../foods">
+        <label for="food">Food name: </label> 
+        <input type="text" name="name">
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+  </body>
+</html>
